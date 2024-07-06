@@ -1,85 +1,93 @@
-AtelierJ.richard
-Description
-AtelierJ.richard est un back-end pour un site e-commerce développé avec Express.js et MongoDB. Ce projet permet de gérer les produits, les utilisateurs, les commandes et les paiements. Il est conçu pour être scalable, sécurisé et facilement maintenable.
 
-Fonctionnalités
-Gestion des produits : Ajouter, modifier, supprimer et afficher des produits.
-Gestion des utilisateurs : Inscription, connexion, gestion de profil et déconnexion.
-Gestion des commandes : Création, mise à jour et affichage des commandes.
-Paiements : Intégration avec des passerelles de paiement pour traiter les transactions.
-Sécurité : Authentification et autorisation robustes.
-Technologies Utilisées
-Langage : JavaScript (Node.js)
-Framework : Express.js
-Base de données : MongoDB
-ORM : Mongoose
-Authentification : JSON Web Tokens (JWT)
-Tests : Jest, Supertest
-Installation
-Prérequis
-Node.js
-MongoDB
-Étapes d'installation
-Cloner le dépôt
+# AtelierJ.richard - E-commerce Backend
 
-bash
-Copier le code
-git clone https://github.com/lantomalala/atelierJ.Richard-Back
-cd AtelierJ.richard
-Installer les dépendances
+This is the backend for AtelierJ.richard, an e-commerce platform built using Express.js and MongoDB.
 
-bash
-Copier le code
-npm install
-Configurer l'environnement
+## Table of Contents
 
-Créez un fichier .env à la racine du projet et ajoutez les variables d'environnement suivantes :
+- [Installation](#installation)
+- [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+- [Environment Variables](#environment-variables)
+- [Contributing](#contributing)
+- [License](#license)
 
-env
-Copier le code
-PORT=3000
-MONGODB_URI=votre_uri_mongodb
-JWT_SECRET=votre_secret_jwt
-Lancer le serveur
+## Installation
 
-bash
-Copier le code
-npm start
-Utilisation
-Le serveur sera disponible sur http://localhost:3040.
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/yourusername/AtelierJ.richard.git
+    cd AtelierJ.richard
+    ```
 
-Endpoints
-Produits
-GET /api/products : Récupérer tous les produits.
-GET /api/products/
-: Récupérer un produit par ID.
-POST /api/products : Ajouter un nouveau produit.
-PUT /api/products/
-: Modifier un produit par ID.
-DELETE /api/products/
-: Supprimer un produit par ID.
-Utilisateurs
-POST /api/users/register : Inscription d'un nouvel utilisateur.
-POST /api/users/login : Connexion d'un utilisateur.
-GET /api/users/profile : Récupérer le profil de l'utilisateur connecté.
-Commandes
-GET /api/orders : Récupérer toutes les commandes.
-GET /api/orders/
-: Récupérer une commande par ID.
-POST /api/orders : Créer une nouvelle commande.
-PUT /api/orders/
-: Mettre à jour une commande par ID.
-Tests
-Pour lancer les tests, utilisez la commande suivante :
+2. Install dependencies:
+    ```sh
+    npm install
+    ```
 
-bash
-Copier le code
-npm test
-Contribution
-Les contributions sont les bienvenues ! Pour signaler un bug ou proposer une nouvelle fonctionnalité, veuillez ouvrir une issue. Pour contribuer au code, veuillez suivre ces étapes :
+3. Set up environment variables. Create a `.env` file in the root directory and add the following:
+    ```env
+    PORT=5000
+    MONGO_URI=your_mongodb_uri
+    JWT_SECRET=your_jwt_secret
+    ```
 
-Fork le dépôt
-Créez une branche pour votre fonctionnalité (git checkout -b feature/NouvelleFonctionnalité)
-Committez vos changements (git commit -m 'Ajouter une nouvelle fonctionnalité')
-Poussez vers la branche (git push origin feature/NouvelleFonctionnalité)
-Ouvrez une Pull Request
+4. Start the server:
+    ```sh
+    npm start
+    ```
+
+## Usage
+
+- To start the server in development mode with nodemon:
+    ```sh
+    npm run dev
+    ```
+
+- To run tests:
+    ```sh
+    npm test
+    ```
+
+## API Endpoints
+
+### Auth
+
+- `POST /api/auth/register` - Register a new user
+- `POST /api/auth/login` - Login a user
+
+### Products
+
+- `GET /api/products` - Get all products
+- `GET /api/products/:id` - Get a single product by ID
+- `POST /api/products` - Create a new product
+- `PUT /api/products/:id` - Update a product by ID
+- `DELETE /api/products/:id` - Delete a product by ID
+
+### Orders
+
+- `GET /api/orders` - Get all orders
+- `GET /api/orders/:id` - Get a single order by ID
+- `POST /api/orders` - Create a new order
+- `PUT /api/orders/:id` - Update an order by ID
+- `DELETE /api/orders/:id` - Delete an order by ID
+
+## Environment Variables
+
+The application requires the following environment variables to be set:
+
+- `PORT` - The port on which the server will run
+- `MONGO_URI` - The URI for connecting to MongoDB
+- `JWT_SECRET` - Secret key for JWT authentication
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature/your-feature-name`.
+3. Make your changes and commit them: `git commit -m 'Add some feature'`.
+4. Push to the branch: `git push origin feature/your-feature-name`.
+5. Open a pull request.
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
