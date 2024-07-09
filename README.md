@@ -11,6 +11,7 @@ This is the backend for AtelierJ.richard, an e-commerce platform built using Exp
 - [Environment Variables](#environment-variables)
 - [Contributing](#contributing)
 - [License](#license)
+- [Lien de test](https://atelierj-richard-back.onrender.com/panierPersonalise)
 
 ## Installation
 
