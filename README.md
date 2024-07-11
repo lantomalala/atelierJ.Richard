@@ -16,7 +16,7 @@ This is the backend for AtelierJ.richard, an e-commerce platform built using Exp
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/AtelierJ.richard.git
+    git clone https://github.com/lantomalala/AtelierJ.richard.git
     cd AtelierJ.richard
     ```
 
@@ -27,7 +27,6 @@ This is the backend for AtelierJ.richard, an e-commerce platform built using Exp
 
 3. Set up environment variables. Create a `.env` file in the root directory and add the following:
     ```env
-    PORT=5000
     MONGO_URI=your_mongodb_uri
     JWT_SECRET=your_jwt_secret
     ```
